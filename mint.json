@@ -1,91 +1,113 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
-  "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
-  },
-  "favicon": "/favicon.svg",
+  "name": "IOTA Wiki",
   "colors": {
     "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
-    "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
-    }
+    "light": "#55D799",
+    "dark": "#0D9373"
   },
-  "topbarLinks": [
-    {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
-    }
-  ],
-  "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
-  },
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
-  "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
-    }
-  ],
+  "favicon": "/favicon.svg",
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Introduction",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "get-started/introduction/",
+        {
+          "group": "IOTA",
+          "pages": [
+            "get-started/introduction/iota/introduction",
+            "get-started/introduction/iota/iota-token/"
+          ]
+        },
+        {
+          "group": "Shimmer",
+          "pages": [
+            "get-started/introduction/shimmer/introduction",
+            "get-started/introduction/shimmer/shimmer-token/"
+          ]
+        }
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Get Started/the Community/community Links/",
+      "pages": ["get-started/the-community/community-links/"]
+    },
+    {
+      "group": "Get Started/programs/touchpoint/",
+      "pages": ["get-started/programs/touchpoint/"]
+    },
+    {
+      "group": "Get Started/wallets/",
+      "pages": ["get-started/wallets/"]
+    },
+    {
+      "group": "Https://explorer.iota.org/mainnet"
+    },
+    {
+      "group": "Get Started/research Papers/",
+      "pages": ["get-started/research-papers/"]
+    },
+    {
+      "group": "Get Started/faq/",
+      "pages": ["get-started/faq/"]
+    },
+    {
+      "group": "Protocols",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "learn/protocols/introduction",
+        "learn/protocols/coordinator/",
+        "learn/protocols/stardust/introduction/",
+        "learn/protocols/iota2.0/introduction-to-digital-autonomy/"
       ]
     },
     {
-      "group": "API Documentation",
-      "pages": [
-        "api-reference/introduction"
-      ]
+      "group": "Learn/smart Contracts/introduction/",
+      "pages": ["learn/smart-contracts/introduction/"]
     },
     {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
-      ]
+      "group": "Learn/governance/governance Intro/",
+      "pages": ["learn/governance/governance-intro/"]
+    },
+    {
+      "group": "Learn/glossary/",
+      "pages": ["learn/glossary/"]
+    },
+    {
+      "group": "Build/welcome/",
+      "pages": ["build/welcome/"]
+    },
+    {
+      "group": "Build/networks Endpoints/",
+      "pages": ["build/networks-endpoints/"]
+    },
+    {
+      "group": "Build/tools/",
+      "pages": ["build/tools/"]
+    },
+    {
+      "group": "Https://tanglephp.com/"
+    },
+    {
+      "group": "Maintain/welcome/",
+      "pages": ["maintain/welcome/"]
     }
   ],
-  "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://linkedin.com/company/mintlify"
-  }
+  "tabs": [
+    {
+      "name": "Get Started",
+      "url": "/get-started/introduction/iota/introduction/"
+    },
+    {
+      "name": "Learn",
+      "url": "/learn/protocols/introduction/"
+    },
+    {
+      "name": "Build",
+      "url": "/build/welcome/"
+    },
+    {
+      "name": "Maintain",
+      "url": "/maintain/welcome/"
+    }
+  ]
 }
