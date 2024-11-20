@@ -1,6 +1,6 @@
 # Migarting from Docusaurus to Mintlify
 
-`Mintlify` is designed to help developers create and maintain high-quality documentation effortlessly, with a bunch of amazing features like automated AI search functionality, easily customisable styles, automatically generated API refrences and much more. With all these features in mind you'd want to know how you can migrate from your current Doc provider, Docusaurus in this case, to Mintlify, luckily this is a seemless and easy process which is what this guide will walk you through how to do.
+`Mintlify` is designed to help developers create and maintain high-quality documentation effortlessly, with a bunch of amazing features like automated AI search functionality, easily customisable styles, automatically generated API refrences and much more. With all these features in mind, naturally you'd want to know how you can migrate from your current Doc provider, namely Docusaurus, to Mintlify, luckily this is a seemless and easy process which you'll be walked through in this guide.
 
 ## Table of Contents
 
@@ -80,4 +80,4 @@ git push
 
 ## Step 5: Finding Your Updated Docs
 
-Head your [dashboard](https://dashboard.mintlify.com/) on Mintlify. There will be a button labelled `Visit Docs` , click on it and that will take you to your deployed documentation succesfully migrated from Docusuarus
+Head to your [dashboard](https://dashboard.mintlify.com/) on Mintlify. There will be a button labelled `Visit Docs` , click on it and that will take you to your deployed documentation, succesfully migrated from Docusaurus
