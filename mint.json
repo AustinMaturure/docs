@@ -40,9 +40,7 @@
       "group": "Get Started/wallets/",
       "pages": ["get-started/wallets/"]
     },
-    {
-      "group": "Https://explorer.iota.org/mainnet"
-    },
+
     {
       "group": "Get Started/research Papers/",
       "pages": ["get-started/research-papers/"]
@@ -83,9 +81,6 @@
     {
       "group": "Build/tools/",
       "pages": ["build/tools/"]
-    },
-    {
-      "group": "Https://tanglephp.com/"
     },
     {
       "group": "Maintain/welcome/",
