@@ -1,83 +1,134 @@
-# Migarting from Docusaurus to Mintlify
+<!--
+*** This README is using the Best-README-Template (https://github.com/othneildrew/Best-README-Template).
+-->
 
-`Mintlify` is designed to help developers create and maintain high-quality documentation effortlessly, with a bunch of amazing features like automated AI search functionality, easily customisable styles, automatically generated API refrences and much more. With all these features in mind, naturally you'd want to know how you can migrate from your current Doc provider, namely Docusaurus, to Mintlify, luckily this is a seemless and easy process which you'll be walked through in this guide.
+<div align="center">
+
+  <!-- PROJECT SHIELDS -->
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![Gitpod][gitpod-shield]][gitpod-url]
+
+  <!-- PROJECT LOGO -->
+  <p>
+    <a href="https://wiki.iota.org">
+      <img src="static/img/GitHub_Wiki_Banner.png" alt="IOTA Wiki GitHub Banner" max-width="830px">
+    </a>
+  </p>
+  <p>
+    <a href="https://wiki.iota.org"><strong>EXPLORE THE WIKI</strong></a>
+  </p>
+  <p>
+    <a href="https://github.com/iota-wiki/iota-wiki/issues">Report Error</a>
+    ·
+    <a href="https://github.com/iota-wiki/iota-wiki/issues">Request Topic</a>
+  </p>
+
+</div>
+
+<!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
 
-- Migrating a Docusaurus project to Mintlify
+- [About The Project](#about-the-project)
+  - [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Local Development](#local-development)
+- [Contributing](#contributing)
+- [Contact](#contact)
 
-  - [What You'll Need](#what-youll-learn)
+<!-- ABOUT THE PROJECT -->
 
-- [Step 1: Creating an Account](#step-1-creating-a-mintlify-account)
-  - [Installing Mintlify to GitHub](#installing-mintlify-to-github)
-- [Step 2: Cloning the Installed Repo](#step-2-cloning-the-installed-repo)
-- [Step 3: Migrating from Docsaurus](#step-3-migrating-from-docsaurus)
-- [Step 4: Push Migration to Github](#step-4-push-migration-to-github)
-- [Step 5: Finding Your Migrated Docs](#step-5-finding-your-updated-docs)
+## About the Project
 
-## What You'll Need
+The IOTA Wiki is a central hub for entering into the IOTA ecosystem. A community driven initiative to provide an up-to-date collection of introductions and further reading about the technology, the teams, the community, and everything in between. So anyone can learn how to build, adopt, and engage with IOTA, all in one space.
 
-- Git
-- Node.js
-- npm
+### Built With
 
-## Step 1: Creating a Mintlify Account
+The IOTA Wiki is built using [TypeScript](https://www.typescriptlang.org/), [ReactJS](https://reactjs.org/) and [Docusaurus v2.0](https://docusaurus.io/).
 
-Head to [https://dashboard.mintlify.com/signup](https://dashboard.mintlify.com/signup) and follow the prompts create your account.
+<!-- GETTING STARTED -->
 
-### Installing Mintlify to GitHub
+## Getting Started
 
-Once you've created your Account you'll need to install the Mintlify GitHub App in your account, follow the prompts this should create a `Docs` ( or what you called it when you installed it ) Repo in your account, this repo is what we'll use for migration and you should be redirected to your [Dashboard](https://dashboard.mintlify.com/)
+### Prerequisites
 
-## Step 2: Cloning the Installed Repo
+- [git 1.8.2 or above](https://git-scm.com/downloads).
+- [Node.js 16.10 or above](https://nodejs.org/en/download/).
+- [Modern Yarn](https://yarnpkg.com/getting-started/install) enabled by running `corepack enable`.
 
-In your code editor clone the repo installed by Mintlify:
+### Preview Locally
 
-```bash
-git clone <YOUR-INSTALLED-REPO-URL>
-```
+To preview the Wiki locally, use the following steps. For more detailed scripts, see [Pre-configured scripts](#pre-configured-scripts) for reference.
 
-## Step 3: Migrating from Docsaurus
+> Please note that the Wiki has a lot of content, so currently the initial build is taking a while. Effort is taken to try and reduce the build time in the future.
 
-Once cloned, in the root folder run the following code with the URL to your website at the end
+1. Clone the repository by running `git clone https://github.com/iotaledger/iota-wiki.git` and go to the directory with `cd iota-wiki`.
+2. Install dependencies with `yarn`.
+3. Prepare the environment by running `yarn prepare`, this has to be done only once.
+4. Preview the Wiki with `yarn start`, this will start a development server serving the Wiki with hot reload capability, so it will update content after any changes were made.
 
-```bash
-npx @mintlify/scraping@latest section <YOUR-WEBSITE-URL>
-```
+#### Pre-configured scripts
 
-- Things to Look out for
+| Script                    | Explanation                                                                                                                                                                                                         |
+|---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `prepare`                 | Prepare the environment by checking out submodules build.                                                                                                           |
+| `start`                   | Start a development server serving the Wiki, with hot reloading on changes.                                                                                                                                         |
+| `start:section:{section}` | Start a development server serving only a section of the Wiki, with hot reloading on changes. Available sections are `build`, `get-started`, `learn`, and `maintain`.                                               |
+| `build`                   | Build the Wiki. To build for production, checkout the latest version of external documentation by running `yarn checkout:remote` and set the `MODE` environment variable to `production`.                           |
+| `checkout:remote`         | Check out the latest version of external documentation.                                                                                                                                                             |
+| `generate:api`            | Generate available API documentation configured through the [Docusaurus OpenAPI plugin](https://www.npmjs.com/package/@paloaltonetworks/docusaurus-plugin-openapi) and by compiling documentation from source code. |
 
-  We noticed that sometimes empty `pages` values caused the deployment not work as expected. Open the `mint.json` file and remove any `group` keys with an empty `pages` key
+<!-- CONTRIBUTING -->
 
-  e.g
+## Contributing
 
-  ```json
-    {
-    "group": "Get Started/faq/",
-    "pages": [""]
-  },
-  ```
+The IOTA Wiki is maintained by the IF and community contributions are always welcome. The DX team and related teams from the IF will review all issues and pull requests posted to this repository. If you notice any mistakes, or feel something is missing, feel free to create an issue to discuss with the team or directly create a pull request with suggestions. Here is a basic workflow to open a pull request:
 
-  or
+1. Fork this repository to your own account and clone it (`git clone https://github.com/<YOUR_USERNAME>/iota-wiki.git`)
+2. Create a feature branch for your changes (`git checkout -b feat/amazing-feature`).
+3. Make your changes and optionally [preview them locally](#preview-locally).
+4. Run `yarn format` and `yarn lint` and fix any remaining errors and warnings.
+5. Commit your changes (`git commit -m 'Add some amazing feature'`).
+6. Push your changes to your fork (`git push origin feat/amazing-feature`).
+7. Open a pull request to the `main` branch of this repository.
 
-  ```json
-  {
-    "group": "Build/tools/"
-  },
-  ```
+Have a look at [CONTRIBUTING](.github/CONTRIBUTING.md) for further guidance.
 
-  should be removed
+### Versioning
 
-## Step 4: Push Migration to Github
+To find out how to version your docs, read [this guide](https://wiki.iota.org/community/contribute-to-wiki/how_tos/versioning).
 
-Run the following to push the changes:
+### Online one-click setup for contributing
 
-```bash
-git add .
-git commit -m "Migration From Docusaurus to Mintlify"
-git push
-```
+You can use Gitpod (a free, online, VS Code-like IDE) for contributing. With a single click it will prepare everything you need to build and contribute to the Wiki. Just click on this button and skip step 1 from above.
 
-## Step 5: Finding Your Updated Docs
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)][gitpod-url]
 
-Head to your [dashboard](https://dashboard.mintlify.com/) on Mintlify. There will be a button labelled `Visit Docs` , click on it and that will take you to your deployed documentation, succesfully migrated from Docusaurus
+<!-- CONTACT -->
+
+## Contact
+
+Phylo - [Phyloiota](https://github.com/Phyloiota) - Phylo [Community DAO - lets go!]#2233  
+Jeroen van den Hout - [jlvandenhout](https://github.com/jlvandenhout) - jvdhout#4402  
+Dr.Electron - [Dr-Electron](https://github.com/Dr-Electron) - Dr.Electron#9370  
+Critical - [kilianhln](https://github.com/kilianhln) - Critical#7111  
+JSto - [JSto91](https://github.com/JSto91) - JSto#3746
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/iota-wiki/iota-wiki.svg?style=for-the-badge
+[contributors-url]: https://github.com/iota-wiki/iota-wiki/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/iota-wiki/iota-wiki.svg?style=for-the-badge
+[forks-url]: https://github.com/iota-wiki/iota-wiki/network/members
+[stars-shield]: https://img.shields.io/github/stars/iota-wiki/iota-wiki.svg?style=for-the-badge
+[stars-url]: https://github.com/iota-wiki/iota-wiki/stargazers
+[issues-shield]: https://img.shields.io/github/issues/iota-wiki/iota-wiki.svg?style=for-the-badge
+[issues-url]: https://github.com/iota-wiki/iota-wiki/issues
+[gitpod-shield]: https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod&style=for-the-badge
+[gitpod-url]: https://gitpod.io/#https://github.com/iota-community/iota-Wiki

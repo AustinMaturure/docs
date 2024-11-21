@@ -11,98 +11,98 @@
     {
       "group": "Introduction",
       "pages": [
-        "get-started/introduction/",
+        "docs/get-started/introduction/",
         {
           "group": "IOTA",
           "pages": [
-            "get-started/introduction/iota/introduction",
-            "get-started/introduction/iota/iota-token/"
+            "docs/get-started/introduction/iota/introduction",
+            "docs/get-started/introduction/iota/iota-token/"
           ]
         },
         {
           "group": "Shimmer",
           "pages": [
-            "get-started/introduction/shimmer/introduction",
-            "get-started/introduction/shimmer/shimmer-token/"
+            "docs/get-started/introduction/shimmer/introduction",
+            "docs/get-started/introduction/shimmer/shimmer-token/"
           ]
         }
       ]
     },
     {
       "group": "Get Started/the Community/community Links/",
-      "pages": ["get-started/the-community/community-links/"]
+      "pages": ["docs/get-started/the-community/community-links/"]
     },
     {
       "group": "Get Started/programs/touchpoint/",
-      "pages": ["get-started/programs/touchpoint/"]
+      "pages": ["docs/get-started/programs/touchpoint/"]
     },
     {
       "group": "Get Started/wallets/",
-      "pages": ["get-started/wallets/"]
+      "pages": ["docs/get-started/wallets/"]
     },
 
     {
       "group": "Get Started/research Papers/",
-      "pages": ["get-started/research-papers/"]
+      "pages": ["docs/get-started/research-papers/"]
     },
     {
       "group": "Get Started/faq/",
-      "pages": ["get-started/faq/"]
+      "pages": ["docs/get-started/faq/"]
     },
     {
       "group": "Protocols",
       "pages": [
-        "learn/protocols/introduction",
-        "learn/protocols/coordinator/",
-        "learn/protocols/stardust/introduction/",
-        "learn/protocols/iota2.0/introduction-to-digital-autonomy/"
+        "docs/learn/protocols/introduction",
+        "docs/learn/protocols/coordinator/",
+        "docs/learn/protocols/stardust/introduction/",
+        "docs/learn/protocols/iota2.0/introduction-to-digital-autonomy/"
       ]
     },
     {
       "group": "Learn/smart Contracts/introduction/",
-      "pages": ["learn/smart-contracts/introduction/"]
+      "pages": ["docs/learn/smart-contracts/introduction/"]
     },
     {
       "group": "Learn/governance/governance Intro/",
-      "pages": ["learn/governance/governance-intro/"]
+      "pages": ["docs/learn/governance/governance-intro/"]
     },
     {
       "group": "Learn/glossary/",
-      "pages": ["learn/glossary/"]
+      "pages": ["docs/learn/glossary/"]
     },
     {
       "group": "Build/welcome/",
-      "pages": ["build/welcome/"]
+      "pages": ["docs/build/welcome/"]
     },
     {
       "group": "Build/networks Endpoints/",
-      "pages": ["build/networks-endpoints/"]
+      "pages": ["docs/build/networks-endpoints/"]
     },
     {
       "group": "Build/tools/",
-      "pages": ["build/tools/"]
+      "pages": ["docs/build/tools/"]
     },
     {
       "group": "Maintain/welcome/",
-      "pages": ["maintain/welcome/"]
+      "pages": ["docs/maintain/welcome/"]
     }
   ],
   "tabs": [
     {
       "name": "Get Started",
-      "url": "/get-started/introduction/iota/introduction/"
+      "url": "docs/get-started/introduction/iota/introduction/"
     },
     {
       "name": "Learn",
-      "url": "/learn/protocols/introduction/"
+      "url": "docs/learn/protocols/introduction/"
     },
     {
       "name": "Build",
-      "url": "/build/welcome/"
+      "url": "docs/build/welcome/"
     },
     {
       "name": "Maintain",
-      "url": "/maintain/welcome/"
+      "url": "docs/maintain/welcome/"
     }
   ]
 }
